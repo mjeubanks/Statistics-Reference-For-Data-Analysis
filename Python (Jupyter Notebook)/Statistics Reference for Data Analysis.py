@@ -3,7 +3,7 @@
 
 # # ---Statistics Reference for Data Analysis---
 
-# 1. Fundemental Variability Functions
+# 1. Fundamental Variability Functions
 # 2. Percentiles and Boxplots
 # 3. Frequency Table and Histograms
 # 4. Bar Charts with Binary/Categorical Data
@@ -22,7 +22,7 @@
 
 
 import os
-os.chdir("C:\\Users\\Monarch Eubanks\\Desktop\\Practical Statistics") #Insert file path
+os.chdir("C:\\Users\\Monarch Eubanks\\Desktop\\") #Insert file path
 
 
 # Import required packages
@@ -184,7 +184,7 @@ df.index = [f'{p * 100}%' for p in percentages]
 print(df.transpose())
 
 
-# ## 2B - HOW TO CREATE A BOXPLOT
+# ## 2B - How to Create a Boxplot
 
 # In[11]:
 
@@ -198,7 +198,7 @@ plt.show()
 
 # # 3 - Frequency Table and Histograms
 # 
-# ## 3A - HOW TO CREATE A FREQUENCY TABLE
+# ## 3A - How to Create a Frequency Table
 # 
 # The `cut` method for _pandas_ data splits the dataset into bins. There are a number of arguments for the method. The following code creates equal sized bins. The method `value_counts` returns a frequency table. The (x, y) values are the lower and upper ranges of the bin.
 
@@ -209,7 +209,7 @@ binnedPopulation = pd.cut(state['Population'], 10)
 print(binnedPopulation.value_counts())
 
 
-# ## 3B - HOW TO DISPLAY GROUP VALUES IN A FREQUENCY TABLE
+# ## 3B - How to Display Groups in a Frequency Table
 
 # In[16]:
 
@@ -229,7 +229,7 @@ for group, subset in df.groupby(by='binnedPopulation'):
 print(pd.DataFrame(groups))
 
 
-# ## 3C - HOW TO CREATE A HISTOGRAM
+# ## 3C - How to Create a Histogram
 # 
 # This states the frequency of one variable.
 
@@ -243,7 +243,7 @@ plt.tight_layout()
 plt.show()
 
 
-# ## 3D - HOW TO CREATE A DENSITY
+# ## 3D - How to Create a Density Plot
 # 
 # Density is an alternative to histograms that can provide more insight into the distribution of the data points. Use the argument `bw_method` to control the smoothness of the density curve.
 # 
@@ -271,7 +271,7 @@ dfw = pd.read_csv(AIRPORT_DELAYS_CSV)
 print(100 * dfw / dfw.values.sum()) #percentage delays by column value
 
 
-# ## 4A - HOW TO PLOT A BAR CHART
+# ## 4A - How to Create a Bar Chart
 # 
 # This compares frequency of more than one variable
 
